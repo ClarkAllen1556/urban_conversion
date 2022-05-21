@@ -1,11 +1,16 @@
 <script setup>
+import Card from './components/Card.vue'
+import Temperature from './components/conversions/Temperature.vue';
 </script>
 
 <template>
   <div>
     <h1> Urban Conversion </h1>
     <img alt="Urban Conversion Logo" src="./assets/logo.png" />
-    <h2>Currently under development 👩‍💻</h2>
+
+    <Card title="Covert C to F">
+      <Temperature />
+    </Card>
   </div>
 </template>
 
