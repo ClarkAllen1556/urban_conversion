@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap&subset=latin-ext');
+
+body {
+  font-family: 'Zilla Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #002b36;
+  background-color: #eee8d5;
+  height: 100vh;
+}
