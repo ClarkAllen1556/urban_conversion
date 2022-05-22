@@ -22,19 +22,22 @@ defineProps({
 .card {
   border: 2px solid #268bd2;
   border-radius: 5px;
+
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 2.5rem;
+
   background-color: white;
+
   min-height: 5rem;
+  width: max-content;
   max-width: 50%;
 }
 
 .card-title {
   text-align: left;
-  margin-left: 1rem;
-  margin-top: 1rem;
 }
 
 .card-content {
