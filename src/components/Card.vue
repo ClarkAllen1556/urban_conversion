@@ -27,7 +27,7 @@ defineProps({
   margin-bottom: 2.5rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2.5rem;
+  padding: 1rem;
 
   background-color: white;
 
@@ -38,6 +38,7 @@ defineProps({
 
 .card-title {
   text-align: left;
+  margin-bottom: 1rem;
 }
 
 .card-content {
@@ -47,7 +48,11 @@ defineProps({
   column-gap: 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
+  .card-title {
+    text-align: center;
+  }
+
   .card-content {
     flex-direction: column;
   }

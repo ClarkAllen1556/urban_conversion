@@ -36,8 +36,8 @@ const convertToFahrenheit = (inputC) => {
   align-items: flex-start;
 }
 
-@media screen and (max-width: 600px) {
-  .unit-input {
+@media screen and (max-width: 750px) {
+  .unit-input:not(:first-child) {
     margin-top: 1rem;
   }
 }
