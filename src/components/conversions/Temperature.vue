@@ -19,12 +19,12 @@ watch(tempF, (cur) => {
 
 <template>
   <div>
-    <label> Cel </label>
+    <label> Celsius </label>
     <Input v-model="tempC" />
   </div>
 
   <div>
-    <label> Feh </label>
+    <label> Fahrenheit </label>
     <Input v-model="tempF" />
   </div>
 </template>
