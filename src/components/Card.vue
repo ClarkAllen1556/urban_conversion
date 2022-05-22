@@ -31,7 +31,7 @@ defineProps({
 
   background-color: white;
 
-  min-height: 5rem;
+  height: max-content;
   width: max-content;
   max-width: 50%;
 }
@@ -45,5 +45,11 @@ defineProps({
   align-content: center;
   justify-content: center;
   column-gap: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-content {
+    flex-direction: column;
+  }
 }
 </style>

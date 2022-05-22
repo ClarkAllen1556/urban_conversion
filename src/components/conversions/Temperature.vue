@@ -35,4 +35,10 @@ const convertToFahrenheit = (inputC) => {
   flex-direction: column;
   align-items: flex-start;
 }
+
+@media screen and (max-width: 600px) {
+  .unit-input {
+    margin-top: 1rem;
+  }
+}
 </style>
