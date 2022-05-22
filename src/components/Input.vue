@@ -8,11 +8,16 @@ defineProps({
   },
   type: {
     type: String,
-    default: "number"
-  }
-})
+    default: 'number',
+  },
+});
 </script>
 
 <template>
-  <input :type="type" :placeholder="placeHolder" :value="value" @input="e => $emit('update', e.target.value)" />
+  <input
+    :type="type"
+    :placeholder="placeHolder"
+    :value="value"
+    @input="(e) => $emit('update', e.target.value)"
+  />
 </template>

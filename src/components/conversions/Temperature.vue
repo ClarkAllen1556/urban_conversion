@@ -1,12 +1,12 @@
 <script setup>
-import { ref, } from 'vue';
+import { ref } from 'vue';
 import Input from '../Input.vue';
 
-const CONVERSION_MULTIPLIER = 1.8
-const DEG_OFFSET = 32
+const CONVERSION_MULTIPLIER = 1.8;
+const DEG_OFFSET = 32;
 
-const tempC = ref(null)
-const tempF = ref(null)
+const tempC = ref(null);
+const tempF = ref(null);
 
 // const tempCValue = computed(() => {
 //   return (tempFInput.value - DEG_OFFSET) / CONVERSION_MULTIPLIER
@@ -26,12 +26,12 @@ const tempF = ref(null)
 // })
 
 const convertToCelsius = (inputF) => {
-  tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2)
-}
+  tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2);
+};
 
 const convertToFahrenheit = (inputC) => {
-  tempF.value = ((inputC * CONVERSION_MULTIPLIER) + DEG_OFFSET).toFixed(2)
-}
+  tempF.value = (inputC * CONVERSION_MULTIPLIER + DEG_OFFSET).toFixed(2);
+};
 </script>
 
 <template>
