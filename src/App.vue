@@ -8,7 +8,7 @@ import Temperature from './components/conversions/Temperature.vue';
     <h1>Urban Conversion</h1>
     <img alt="Urban Conversion Logo" src="./assets/logo.png" />
 
-    <Card title="Covert C to F">
+    <Card title="Temperature">
       <Temperature />
     </Card>
   </div>
