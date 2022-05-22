@@ -2,20 +2,17 @@
 import { ref, watch } from 'vue';
 import Input from '../Input.vue';
 
+const CONVERSION_MULTIPLIER = 1.8
+const DEG_OFFSET = 32
+
 const tempC = ref(0)
 const tempF = ref(0)
 
 watch(tempC, (cur) => {
-  const CONVERSION_MULTIPLIER = 1.8
-  const DEG_OFFSET = 32
-
   tempF.value = cur * CONVERSION_MULTIPLIER + DEG_OFFSET
 })
 
 watch(tempF, (cur) => {
-  const CONVERSION_MULTIPLIER = 1.8
-  const DEG_OFFSET = 32
-
   tempC.value = (cur - DEG_OFFSET) / CONVERSION_MULTIPLIER
 })
 </script>
