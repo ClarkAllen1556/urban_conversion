@@ -8,23 +8,6 @@ const DEG_OFFSET = 32;
 const tempC = ref(null);
 const tempF = ref(null);
 
-// const tempCValue = computed(() => {
-//   return (tempFInput.value - DEG_OFFSET) / CONVERSION_MULTIPLIER
-// })
-// const tempFValue = computed(() => {
-//   return (tempCInput.value * CONVERSION_MULTIPLIER) + DEG_OFFSET
-// })
-
-// watch(tempC, (cur) => {
-//   console.log("tempC", cur)
-//   tempF.value = cur * CONVERSION_MULTIPLIER + DEG_OFFSET
-// })
-
-// watch(tempF, (cur) => {
-//   console.log("tempF", cur)
-//   tempC.value = (cur - DEG_OFFSET) / CONVERSION_MULTIPLIER
-// })
-
 const convertToCelsius = (inputF) => {
   tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2);
 };
