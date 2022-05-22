@@ -1,33 +1,55 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { ref, } from 'vue';
 import Input from '../Input.vue';
 
 const CONVERSION_MULTIPLIER = 1.8
 const DEG_OFFSET = 32
 
-const tempC = ref(0)
-const tempF = ref(0)
+const tempC = ref(null)
+const tempF = ref(null)
 
-watch(tempC, (cur) => {
-  tempF.value = cur * CONVERSION_MULTIPLIER + DEG_OFFSET
-})
+// const tempCValue = computed(() => {
+//   return (tempFInput.value - DEG_OFFSET) / CONVERSION_MULTIPLIER
+// })
+// const tempFValue = computed(() => {
+//   return (tempCInput.value * CONVERSION_MULTIPLIER) + DEG_OFFSET
+// })
 
-watch(tempF, (cur) => {
-  tempC.value = (cur - DEG_OFFSET) / CONVERSION_MULTIPLIER
-})
+// watch(tempC, (cur) => {
+//   console.log("tempC", cur)
+//   tempF.value = cur * CONVERSION_MULTIPLIER + DEG_OFFSET
+// })
+
+// watch(tempF, (cur) => {
+//   console.log("tempF", cur)
+//   tempC.value = (cur - DEG_OFFSET) / CONVERSION_MULTIPLIER
+// })
+
+const convertToCelsius = (inputF) => {
+  tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2)
+}
+
+const convertToFahrenheit = (inputC) => {
+  tempF.value = ((inputC * CONVERSION_MULTIPLIER) + DEG_OFFSET).toFixed(2)
+}
 </script>
 
 <template>
-  <div>
+  <div class="unit-input">
     <label> Celsius </label>
-    <Input v-model="tempC" />
+    <Input :value="tempC" @update="convertToFahrenheit" />
   </div>
 
-  <div>
+  <div class="unit-input">
     <label> Fahrenheit </label>
-    <Input v-model="tempF" />
+    <Input :value="tempF" @update="convertToCelsius" />
   </div>
 </template>
 
 <style lang="css">
+.unit-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 </style>
