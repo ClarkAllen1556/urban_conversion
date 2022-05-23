@@ -24,12 +24,10 @@ defineProps({
       'p-2',
       'mt-1',
       'border-sol-grey-2',
-      // 'bg-sol-tan-1',
       'focus:border-sol-yellow-1',
       'dark:focus:border-sol-blue-1',
       'rounded-md',
       'dark:bg-sol-black-2',
-      'dark:text-sol-grey-1',
       'outline-none',
     ]"
   />

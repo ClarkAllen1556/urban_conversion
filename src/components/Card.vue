@@ -20,7 +20,6 @@ defineProps({
       'dark:bg-sol-black-1',
       'border-sol-blue-1',
       'dark:border-sol-blue-1',
-      'dark:text-sol-grey-1',
     ]"
   >
     <div v-if="title" :class="['text-left', 'mb-4', 'md:text-center']">

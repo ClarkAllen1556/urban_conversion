@@ -8,9 +8,11 @@ body {
   font-family: 'Zilla Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* color: #93a1a1;
-  background-color: #002b36; */
-  color: #002b36;
-  background-color: #eee8d5;
   height: 100vh;
+}
+
+@layer variant {
+  body {
+    @apply bg-sol-tan-1 text-sol-black-2 dark:bg-sol-black-2 dark:text-sol-grey-1;
+  }
 }

@@ -22,8 +22,7 @@ import Temperature from './components/conversions/Temperature.vue';
 </template>
 
 <style>
-/* #app {
-  text-align: center;
+#app {
   margin-top: 60px;
-} */
+}
 </style>
