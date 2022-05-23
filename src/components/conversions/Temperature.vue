@@ -4,6 +4,7 @@ import Input from '../Input.vue';
 
 const CONVERSION_MULTIPLIER = 1.8;
 const DEG_OFFSET = 32;
+const VALID_NUM_REGEX = /-?[0-9]+.?[0-9]*/g;
 
 const tempC = ref(null);
 const tempF = ref(null);
@@ -11,7 +12,7 @@ const tempF = ref(null);
 const convertToCelsius = (inputF) => {
   tempF.value = inputF;
 
-  if (!inputF) {
+  if (!inputF || !inputF.match(VALID_NUM_REGEX)) {
     tempC.value = null;
   } else {
     tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2);
@@ -21,7 +22,7 @@ const convertToCelsius = (inputF) => {
 const convertToFahrenheit = (inputC) => {
   tempC.value = inputC;
 
-  if (!inputC) {
+  if (!inputC || !inputC.match(VALID_NUM_REGEX)) {
     tempF.value = null;
   } else {
     tempF.value = (inputC * CONVERSION_MULTIPLIER + DEG_OFFSET).toFixed(2);
