@@ -4,9 +4,16 @@ import Temperature from './components/conversions/Temperature.vue';
 </script>
 
 <template>
-  <div>
-    <h1>Urban Conversion</h1>
-    <img alt="Urban Conversion Logo" src="./assets/logo.png" />
+  <div :class="['grid', 'justify-items-center']">
+    <div><h1 :class="['text-3xl']">Urban Conversion</h1></div>
+    <div>
+      <img
+        alt="Urban Conversion Logo"
+        width="200"
+        height="200"
+        src="./assets/logo.png"
+      />
+    </div>
 
     <Card title="Temperature">
       <Temperature />
@@ -15,13 +22,8 @@ import Temperature from './components/conversions/Temperature.vue';
 </template>
 
 <style>
-@import './assets/styles/index.css';
-
-body {
-}
-
-#app {
+/* #app {
   text-align: center;
   margin-top: 60px;
-}
+} */
 </style>

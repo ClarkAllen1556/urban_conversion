@@ -5,56 +5,43 @@ defineProps({
 </script>
 
 <template>
-  <div class="card">
-    <div v-if="title" class="card-title">
+  <div
+    :class="[
+      'p-4',
+      'bg-white',
+      'border-2',
+      'rounded-md',
+      'shadow-md',
+      'h-max',
+      'w-max',
+      'mt-8',
+      'mb-8',
+      'shadow-sol-black-2',
+      'dark:bg-sol-black-1',
+      'border-sol-blue-1',
+      'dark:border-sol-blue-1',
+      'dark:text-sol-grey-1',
+    ]"
+  >
+    <div v-if="title" :class="['text-left', 'mb-4', 'md:text-center']">
       <strong>
         {{ title }}
       </strong>
     </div>
 
-    <div class="card-content">
+    <div
+      :class="[
+        'flex',
+        'content-center',
+        'justify-center',
+        'gap-8',
+        'flex-col',
+        'md:flex-row',
+      ]"
+    >
       <slot />
     </div>
   </div>
 </template>
 
-<style lang="css">
-.card {
-  border: 2px solid #268bd2;
-  border-radius: 5px;
-
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-
-  background-color: white;
-
-  height: max-content;
-  width: max-content;
-  max-width: 50%;
-}
-
-.card-title {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.card-content {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  column-gap: 2rem;
-}
-
-@media only screen and (max-width: 750px) {
-  .card-title {
-    text-align: center;
-  }
-
-  .card-content {
-    flex-direction: column;
-  }
-}
-</style>
+<style lang="css"></style>

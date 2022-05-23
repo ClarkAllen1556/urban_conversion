@@ -4,11 +4,11 @@ defineProps({
     type: String,
   },
   value: {
-    type: Number,
+    type: String,
   },
   type: {
     type: String,
-    default: 'number',
+    default: 'string',
   },
 });
 </script>
@@ -19,5 +19,32 @@ defineProps({
     :placeholder="placeHolder"
     :value="value"
     @input="(e) => $emit('update', e.target.value)"
+    :class="[
+      'border-2',
+      'p-2',
+      'mt-1',
+      'border-sol-grey-2',
+      // 'bg-sol-tan-1',
+      'focus:border-sol-yellow-1',
+      'dark:focus:border-sol-blue-1',
+      'rounded-md',
+      'dark:bg-sol-black-2',
+      'dark:text-sol-grey-1',
+      'outline-none',
+    ]"
   />
 </template>
+
+<style lang="css">
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+</style>
