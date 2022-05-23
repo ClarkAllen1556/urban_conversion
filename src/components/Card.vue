@@ -21,7 +21,10 @@ defineProps({
       'dark:border-sol-blue-1',
     ]"
   >
-    <div v-if="title" :class="['text-left', 'mb-4', 'md:text-center']">
+    <div
+      v-if="title"
+      :class="['text-left', 'mb-4', 'text-center', 'md:text-left']"
+    >
       <strong>
         {{ title }}
       </strong>
