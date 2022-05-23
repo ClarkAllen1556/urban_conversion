@@ -23,7 +23,7 @@ const toggleTheme = () => {
   <div class="flex items-center m-2 mb-0">
     <h1 class="text-3xl">
       <span class="text-card-title-red dark:text-sol-yellow-1"
-        >Urban Conversion
+        >UrbanConversion
       </span>
       <span className="font-semibold">~$</span>
     </h1>
