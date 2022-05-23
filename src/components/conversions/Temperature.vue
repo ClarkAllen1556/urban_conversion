@@ -30,27 +30,15 @@ const convertToFahrenheit = (inputC) => {
 </script>
 
 <template>
-  <div class="unit-input">
+  <div :class="['flex', 'flex-col', 'items-start']">
     <label> Celsius </label>
     <Input :value="tempC" @update="convertToFahrenheit" />
   </div>
 
-  <div class="unit-input">
+  <div :class="['flex', 'flex-col', 'items-start']">
     <label> Fahrenheit </label>
     <Input :value="tempF" @update="convertToCelsius" />
   </div>
 </template>
 
-<style lang="css">
-.unit-input {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-@media screen and (max-width: 750px) {
-  .unit-input:not(:first-child) {
-    margin-top: 1rem;
-  }
-}
-</style>
+<style lang="css"></style>
