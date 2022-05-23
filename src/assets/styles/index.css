@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap&subset=latin-ext');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: 'Zilla Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* color: #93a1a1;
+  background-color: #002b36; */
   color: #002b36;
   background-color: #eee8d5;
   height: 100vh;
