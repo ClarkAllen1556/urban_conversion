@@ -14,7 +14,6 @@ defineProps({
       'shadow-md',
       'h-max',
       'w-max',
-      'mt-8',
       'mb-8',
       'shadow-sol-black-2',
       'dark:bg-sol-black-1',
