@@ -9,11 +9,23 @@ const tempC = ref(null);
 const tempF = ref(null);
 
 const convertToCelsius = (inputF) => {
-  tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2);
+  tempF.value = inputF;
+
+  if (!inputF) {
+    tempC.value = null;
+  } else {
+    tempC.value = ((inputF - DEG_OFFSET) / CONVERSION_MULTIPLIER).toFixed(2);
+  }
 };
 
 const convertToFahrenheit = (inputC) => {
-  tempF.value = (inputC * CONVERSION_MULTIPLIER + DEG_OFFSET).toFixed(2);
+  tempC.value = inputC;
+
+  if (!inputC) {
+    tempF.value = null;
+  } else {
+    tempF.value = (inputC * CONVERSION_MULTIPLIER + DEG_OFFSET).toFixed(2);
+  }
 };
 </script>
 
