@@ -2,6 +2,15 @@
   "name": "urban_conversion",
   "private": true,
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ClarkAllen1556/urban_conversion"
+  },
+  "author": {
+    "name": "Allen Clark",
+    "email": "reach.out@urbanlife.me",
+    "url": "https://urbanlife.me"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
