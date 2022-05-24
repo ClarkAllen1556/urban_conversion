@@ -1,18 +1,30 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import Card from './components/Card.vue';
 import Temperature from './components/conversions/Temperature.vue';
 import ThemeButton from './components/ThemeButton.vue';
 
-const theme = ref(localStorage.getItem('theme'));
+import { enableDarkTheme, osPrefersDarkTheme } from './utils/theme';
+
+const theme = ref(localStorage?.theme);
+
+onMounted(() => {
+  if (localStorage.theme === 'DARK' || osPrefersDarkTheme()) {
+    enableDarkTheme(true);
+    theme.value = 'DARK';
+  } else {
+    enableDarkTheme(false);
+    theme.value = 'LIGHT';
+  }
+});
 
 const toggleTheme = () => {
-  if (!theme.value || theme.value === 'light') {
-    theme.value = 'dark';
-    document.documentElement.classList.add('dark');
+  if (theme.value === 'DARK') {
+    enableDarkTheme(false);
+    theme.value = 'LIGHT';
   } else {
-    theme.value = 'light';
-    document.documentElement.classList.remove('dark');
+    enableDarkTheme(true);
+    theme.value = 'DARK';
   }
 
   localStorage.setItem('theme', theme.value);
