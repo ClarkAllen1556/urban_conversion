@@ -4,7 +4,7 @@ import Input from '../Input.vue';
 
 const CONVERSION_MULTIPLIER = 1.8;
 const DEG_OFFSET = 32;
-const VALID_NUM_REGEX = /^-?\d*\.?\d*$/g;
+const VALID_NUM_REGEX = /^-?\d+\.?\d*$/g;
 
 const tempC = ref(null);
 const tempF = ref(null);
