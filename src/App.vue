@@ -9,7 +9,7 @@ import { enableDarkTheme, osPrefersDarkTheme } from './utils/theme';
 const theme = ref(localStorage?.theme);
 
 onMounted(() => {
-  if (localStorage.theme === 'DARK' || osPrefersDarkTheme()) {
+  if (localStorage.UL_THEME === 'DARK' || osPrefersDarkTheme()) {
     enableDarkTheme(true);
     theme.value = 'DARK';
   } else {
@@ -27,7 +27,7 @@ const toggleTheme = () => {
     theme.value = 'DARK';
   }
 
-  localStorage.setItem('theme', theme.value);
+  localStorage.setItem('UL_THEME', theme.value);
 };
 </script>
 

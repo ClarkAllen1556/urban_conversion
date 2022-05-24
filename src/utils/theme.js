@@ -12,7 +12,7 @@ function _enableDarkTheme() {
 
 function osPrefersDarkTheme() {
   return (
-    !('theme' in localStorage) &&
+    !('UL_THEME' in localStorage) &&
     window.matchMedia('(prefers-color-scheme: dark)').matches
   );
 }
