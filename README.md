@@ -1,6 +1,4 @@
-<center>
-  <img src="./src/assets/logo.png">
-</center>
+![Logo](src/assets/logo.png)
 
 # UrbanConversion
 
