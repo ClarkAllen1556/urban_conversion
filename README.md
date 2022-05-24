@@ -166,4 +166,6 @@ To save the user from having to click a button, conversions are calculated as th
 
 For the UI, I wanted the design to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and the same font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/).
 
+The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality on the site.
+
 I also made sure that the UI components, cards, input fields, titles, etc., all matched with UrbanLife's current stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
