@@ -1,29 +1,29 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import Card from './components/Card.vue';
-import Temperature from './components/conversions/Temperature.vue';
 import ThemeButton from './components/ThemeButton.vue';
+import Temperature from './components/conversions/Temperature.vue';
 
-import { enableDarkTheme, osPrefersDarkTheme } from './utils/theme';
+import { toggleDarkTheme, osPrefersDarkTheme } from './utils/theme';
 
 const theme = ref(localStorage?.theme);
 
 onMounted(() => {
   if (localStorage.UL_THEME === 'DARK' || osPrefersDarkTheme()) {
-    enableDarkTheme(true);
+    toggleDarkTheme(true);
     theme.value = 'DARK';
   } else {
-    enableDarkTheme(false);
+    toggleDarkTheme(false);
     theme.value = 'LIGHT';
   }
 });
 
 const toggleTheme = () => {
   if (theme.value === 'DARK') {
-    enableDarkTheme(false);
+    toggleDarkTheme(false);
     theme.value = 'LIGHT';
   } else {
-    enableDarkTheme(true);
+    toggleDarkTheme(true);
     theme.value = 'DARK';
   }
 
@@ -34,9 +34,10 @@ const toggleTheme = () => {
 <template>
   <div class="flex items-center m-2 mb-0">
     <h1 class="text-3xl">
-      <span class="text-card-title-red dark:text-sol-yellow-1"
-        >UrbanConversion
+      <span class="text-card-title-red dark:text-sol-yellow-1">
+        UrbanConversion
       </span>
+
       <span className="font-semibold">~$</span>
     </h1>
 
@@ -52,6 +53,7 @@ const toggleTheme = () => {
       height="100"
       src="./assets/logo.png"
     />
+
     <Card title="Temperature">
       <Temperature />
     </Card>
