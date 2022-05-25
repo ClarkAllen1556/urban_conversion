@@ -126,8 +126,6 @@ import Distance from './components/conversions/Distance.vue';
 
 The ability to extend the application to support other conversion calculations was intended from the beginning and was one of the driving reasons that a JavaScript framework was used.
 
-In future releases, the process of implementing new conversions will be improved by eliminating the need to modify `App.js`.
-
 ### Feature implementations
 
 **Dark/Light modes**
@@ -175,3 +173,10 @@ For easy extendibility, calculations should be managed by the conversion compone
 For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project. I thought they looked cute and would add a friendly personality to the site.
 
 I also made the UI components, cards, input fields, titles, etc., all match with UrbanLife's stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
+
+## Future improvements
+
+Ideas for how the project can be improved:
+
+- Localization
+- Eliminate the need to modify `App.js` when adding new conversions
