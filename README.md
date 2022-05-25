@@ -160,10 +160,10 @@ To allow for easy extendibility, calculations should be managed by the conversio
 
 _Calculated degrees are rounded to two decimal places._
 
-To save the user from having to click a button, conversions are calculated as the user enters in their value. If the user's input is anything that's but a valid positive or negative number/float, no calculation will be made and the corresponding input field will be blank.
+To save the user from having to click a button, conversions are calculated as the user enters their value. If the user's input is anything that's but a valid positive or negative number/float, no calculation will be made and the corresponding input field will be blank.
 
 ### Design decisions
 
-For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality on the site.
+For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality to the site.
 
 I also made sure that the UI components, cards, input fields, titles, etc., all matched with UrbanLife's current stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
