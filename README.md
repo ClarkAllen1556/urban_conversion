@@ -1,4 +1,10 @@
-![Logo](src/assets/logo.png)
+<p align="center">
+  <img
+    width="200"
+    height="200"
+    src="https://mwaudyewggeblzfruwlr.supabase.co/storage/v1/object/sign/urban-conversion/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ1cmJhbi1jb252ZXJzaW9uL2xvZ28ucG5nIiwiaWF0IjoxNjUzNDUzNzE1LCJleHAiOjE5Njg4MTM3MTV9.DFLWo3iADBkOb1jNZsXZA83ttmMvrwCegptMWSdY4ww"
+  >
+</p>
 
 ---
 
@@ -72,7 +78,7 @@ The live version of UrbanConversion is continuously deployed to an Nginx server 
 
 ### Technology & Architecture
 
-UrbanConversion is built using Vue3 and is styled using Tailwind. I chose Vue due to my prior experience with the framework. While the app is objectively simple and could have been written without a framework, using one allowed for faster development time and a more manageable architecture. The reason for Tailwind was the effortless way it provides for "dark mode" implementations. It was also an excuse to play around with Tailwind as I don't have much experience with it.
+UrbanConversion is built using Vue3 and styled using Tailwind. I chose Vue due to my prior experience with the framework. While the app is objectively simple and could have been written without a framework, using one allowed for faster development time and a more manageable architecture. The reason for Tailwind was the effortless way it provides for "dark mode" implementations.
 
 The app is designed to be extendable. As of version `1.0.0`, it only supports converting degrees Celsius to Fahrenheit however, new conversions can be added by creating a new conversion component under the `src/components/conversions/` directory and then wrapping it in a `Card` component inside of `App.vue`.
 
@@ -126,9 +132,9 @@ In future releases, the process of implementing new conversions will be improved
 
 **Dark/Light modes**
 
-As previously mentioned, Tailwind was chosen because it provides a simple way to add both light and dark modes using its [`dark` variant feature](https://tailwindcss.com/docs/dark-mode). UrbanConversion will default to the user's OS theme settings. The theme can also be changed by clicking the "sun"/"moon" icon in the upper right-hand corner of the window. If the user does toggle the app's theme settings, the result of the toggle will be stored in the browser's local storage. This will be used to determine the user's theme settings during their next visit.
+As previously mentioned, I used Tailwind because it provides a simple way to add both light and dark modes using its [`dark` variant feature](https://tailwindcss.com/docs/dark-mode). UrbanConversion will default to the user's OS theme settings. Changing the theme can also be done by clicking the "sun"/"moon" icon in the upper right-hand corner of the window. When the user does toggle the app's theme, the result of the toggle will is stored in the browser's local storage. This will then be used to determine the user's theme during their next visit.
 
-The theme settings are queried during the `App.vue`'s `onMounted` lifecycle event. First, it checks the local storage for a saved theme value, then the OS's preferred mode. Helper functions exist under `src/utils/theme.js` for querying the OS's preferred theme and toggling dark mode: `osPrefersDarkTheme` and `toggleDarkTheme`.
+The theme settings are determined during `App.vue`'s `onMounted` lifecycle event. First, it checks the local storage for a saved theme value, then the OS's preferred mode. Helper functions exist under `src/utils/theme.js` for querying the OS's preferred theme and toggling dark mode: `osPrefersDarkTheme` and `toggleDarkTheme`.
 
 ```javascript
 /**
@@ -153,17 +159,19 @@ function toggleDarkTheme(enable) {}
 
 **Conversions**
 
-To allow for easy extendibility, calculations should be managed by the conversion components themselves. For the temperature conversion, the following calculations are used:
+For the temperature conversion, the following calculations are used:
 
 - _Celsius_: `(degrees Fahrenheit - 32) / 1.8`
 - _Fahrenheit_: `(degrees Celsius * 1.8) + 32`
 
-_Calculated degrees are rounded to two decimal places._
+_Calculated results are rounded to two decimal places._
 
-To save the user from having to click a button, conversions are calculated as the user enters their value. If the user's input is anything that's but a valid positive or negative number/float, no calculation will be made and the corresponding input field will be blank.
+To save the user from having to click a button, conversions are calculated as the user enters their value. User input is limited to positive or negative numbers/floats. Calculations will not be done if the input value is invalid, and the corresponding input field will be blank.
+
+For easy extendibility, calculations should be managed by the conversion components themselves when adding new conversions
 
 ### Design decisions
 
-For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality to the site.
+For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project. I thought they looked cute and would add a friendly personality to the site.
 
-I also made sure that the UI components, cards, input fields, titles, etc., all matched with UrbanLife's current stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
+I also made the UI components, cards, input fields, titles, etc., all match with UrbanLife's stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
