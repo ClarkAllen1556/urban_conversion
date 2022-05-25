@@ -70,7 +70,7 @@ The live version of UrbanConversion is continuously deployed to an Nginx server 
 
 UrbanConversion is built using Vue3 and is styled using Tailwind. I chose Vue due to my prior experience with the framework. While the app is objectively simple and could have been written without a framework, using one allowed for faster development time and a more manageable architecture. The reason for Tailwind was the effortless way it provides for "dark mode" implementations. It was also an excuse to play around with Tailwind as I don't have much experience with it.
 
-The app is designed to be extendable. As of version `1.0.0`, it only supports converting degrees Celsius to Fahrenheit however, new conversion can be added by creating a new conversion component under the `src/components/conversions/` directory and then implementing it as a `Card` component inside of `App.vue`.
+The app is designed to be extendable. As of version `1.0.0`, it only supports converting degrees Celsius to Fahrenheit however, new conversions can be added by creating a new conversion component under the `src/components/conversions/` directory and then wrapping it in a `Card` component inside of `App.vue`.
 
 **Example**
 Adding a new "Distance" calculator:
@@ -101,13 +101,7 @@ import Distance from './components/conversions/Distance.vue';
 </script>
 
 <div :class="['grid', 'justify-items-center']">
-    <img
-      alt="Urban Conversion Logo"
-      width="100"
-      height="100"
-      src="./assets/logo.png"
-    />
-
+   ...
     <Card title="Temperature">
       <Temperature />
     </Card>
@@ -120,7 +114,9 @@ import Distance from './components/conversions/Distance.vue';
 </div>
 ```
 
-The ability to extend the application to support other conversion calculations was intended from the beginning and was one of the driving reasons that a JavaScript framework, such as Vue, was chosen. In future releases, the process of implementing a new conversion will be improved by eliminating the need to modify `App.js`.
+The ability to extend the application to support other conversion calculations was intended from the beginning and was one of the driving reasons that a JavaScript framework was used.
+
+In future releases, the process of implementing new conversions will be improved by eliminating the need to modify `App.js`.
 
 ### Feature implementations
 
@@ -164,7 +160,7 @@ To save the user from having to click a button, conversions are calculated as th
 
 ### Design decisions
 
-For the UI, I wanted the design to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and the same font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/).
+For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/).
 
 The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality on the site.
 
