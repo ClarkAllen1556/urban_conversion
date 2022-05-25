@@ -1,4 +1,6 @@
-![Logo](src/assets/logo.png)
+[<img src="https://mwaudyewggeblzfruwlr.supabase.co/storage/v1/object/sign/urban-conversion/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ1cmJhbi1jb252ZXJzaW9uL2xvZ28ucG5nIiwiaWF0IjoxNjUzNDQxMjAxLCJleHAiOjE5Njg4MDEyMDF9._Oe4QoJATgBL8g421RfdomjkZnB0bqfVElqgKF_qDn8" width="100" alt="UrbanConversion logo" class="jop-noMdConv">](https://conversion.urbanlife.me)
+
+---
 
 # UrbanConversion
 
@@ -60,7 +62,7 @@ UrbanConversion can be built using the following:
 pnpm run build
 ```
 
-The application bundle will be output to the `dist/` directory. This bundle can then be served to any static hosting service.
+The application bundle will be output to the `dist/` directory. This can then be served with any static hosting service.
 
 ## Project Details
 
@@ -162,8 +164,6 @@ To save the user from having to click a button, conversions are calculated as th
 
 ### Design decisions
 
-For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/).
-
-The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality on the site.
+For the UI, I wanted the branding to be consistent with other sites that I host on the same domain, [urbanlife.me](https://urbanlife.me). To achieve this, I used the same color palette, Ethan Schoonover's [Solarized](https://ethanschoonover.com/solarized/), and font family, Mozilla's [Zilla Slab](https://blog.mozilla.org/opendesign/zilla-slab-common-language-shared-font/). The icons that I used are from [OpenMoji](https://openmoji.org/). I discovered this icon set while working on this project and thought they looked really cute. They add a friendly personality on the site.
 
 I also made sure that the UI components, cards, input fields, titles, etc., all matched with UrbanLife's current stylings. Tailwind made this process very easy. I could reuse most of my Tailwind configuration from my other projects. This meant things like my color palette were instantly available inside my project.
