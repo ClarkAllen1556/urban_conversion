@@ -33,12 +33,20 @@ const convertToFahrenheit = (inputC) => {
 <template>
   <div :class="['flex', 'flex-col', 'items-start']">
     <label> Celsius </label>
-    <Input :value="tempC" @update="convertToFahrenheit" />
+    <Input
+      :value="tempC"
+      @update="convertToFahrenheit"
+      placeholder="Degrees Celsius"
+    />
   </div>
 
   <div :class="['flex', 'flex-col', 'items-start']">
     <label> Fahrenheit </label>
-    <Input :value="tempF" @update="convertToCelsius" />
+    <Input
+      :value="tempF"
+      @update="convertToCelsius"
+      placeholder="Degrees Fahrenheit"
+    />
   </div>
 </template>
 
