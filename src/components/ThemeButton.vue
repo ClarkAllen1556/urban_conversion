@@ -9,11 +9,21 @@ defineProps({
 
 <template>
   <button @click="() => $emit('toggle-theme')">
-    <div v-if="theme === 'LIGHT'">
-      <img src="../assets/moon_icon.svg" width="30" height="30" />
+    <div v-if="theme === 'LIGHT'" title="Switch to dark theme">
+      <img
+        src="../assets/moon_icon.svg"
+        alt="Dark theme icon"
+        width="30"
+        height="30"
+      />
     </div>
-    <div v-else>
-      <img src="../assets/sun_icon.svg" width="30" height="30" />
+    <div v-else title="Switch to light theme">
+      <img
+        src="../assets/sun_icon.svg"
+        alt="Light theme icon"
+        width="30"
+        height="30"
+      />
     </div>
   </button>
 </template>
