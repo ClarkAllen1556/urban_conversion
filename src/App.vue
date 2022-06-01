@@ -38,7 +38,7 @@ const toggleTheme = () => {
         UrbanConversion
       </span>
 
-      <span className="font-semibold">~$</span>
+      <span class="font-semibold">~$</span>
     </h1>
 
     <div class="ml-auto">
