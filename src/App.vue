@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import Card from './components/Card.vue';
 import ThemeButton from './components/ThemeButton.vue';
-import Temperature from './components/conversions/Temperature.vue';
+import Modules from 'conversions/Modules';
 
 import { toggleDarkTheme, osPrefersDarkTheme } from './utils/theme';
 
@@ -54,8 +54,8 @@ const toggleTheme = () => {
       src="./assets/logo.png"
     />
 
-    <Card title="Temperature">
-      <Temperature />
+    <Card v-for="(conversion, i) in Modules" :title="conversion.title">
+      <component :is="conversion.module" :key="i" />
     </Card>
   </div>
 </template>
