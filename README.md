@@ -1,10 +1,10 @@
-<p align="center">
+<div style="display: flex; justify-content: center;">
   <img
     width="200"
     height="200"
     src="https://mwaudyewggeblzfruwlr.supabase.co/storage/v1/object/sign/urban-conversion/logo.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ1cmJhbi1jb252ZXJzaW9uL2xvZ28ucG5nIiwiaWF0IjoxNjUzNDUzNzE1LCJleHAiOjE5Njg4MTM3MTV9.DFLWo3iADBkOb1jNZsXZA83ttmMvrwCegptMWSdY4ww"
   >
-</p>
+</div>
 
 ---
 
